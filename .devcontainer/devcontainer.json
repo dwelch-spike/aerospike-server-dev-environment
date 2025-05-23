@@ -1,0 +1,40 @@
+{
+  "name": "Aerospike Server Dev (Ubuntu 24.04)",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "..",
+    "args": {
+      // "USERNAME": "devuser",
+      // "PASSWORD": "devpassword"
+    }
+  },
+  "runArgs": [
+    "--cap-add=SYS_PTRACE",
+    "--security-opt",
+    "seccomp=unconfined",
+    "--ulimit",
+    "nofile=65536:65536"
+  ],
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "editor.formatOnSave": true
+  },
+  "extensions": [
+    "ms-vscode.cpptools",
+    "twxs.cmake",
+    "ms-azuretools.vscode-docker",
+    "eamodio.gitlens",
+    "ms-vscode.makefile-tools"
+  ],
+  "remoteUser": "root",
+  "forwardPorts": [
+    3000,
+    8081,
+    22
+  ],
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+    "source=${env:HOME}/.gitconfig,target=/root/.gitconfig,type=bind,consistency=cached",
+    "source=${env:HOME}/.ssh,target=/root/.ssh,type=bind,consistency=cached"
+  ]
+}

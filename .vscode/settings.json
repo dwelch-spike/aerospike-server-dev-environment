@@ -1,0 +1,4 @@
+{
+    "makefile.configureOnOpen": true,
+    "makefile.makefilePath": "/workspaces/aerospike-server-dev-environment/aerospike-benchmark/Makefile"
+}

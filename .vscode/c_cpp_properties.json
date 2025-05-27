@@ -3,9 +3,10 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/aerospike-benchmark/**",
-                "${workspaceFolder}/aerospike-benchmark/src/include/**",
-                "/usr/include/**"
+                "${workspaceFolder}/**",
+                // "${workspaceFolder}/aerospike-benchmark/**",
+                // "${workspaceFolder}/aerospike-benchmark/src/include/**",
+                // "/usr/include/**"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
